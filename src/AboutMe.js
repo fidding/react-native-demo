@@ -10,6 +10,8 @@ import {
     StyleSheet,
 } from 'react-native';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 // pages
 import Login from './Login';
 
@@ -33,9 +35,21 @@ class AboutMe extends React.Component {
 	    return (
 	        <View style={STYLES.container}>
                 <View style={STYLES.header}>
-                </View>
-                <View style={STYLES.bodyer}>
-                    <Text style={{color: "white", fontSize: 30}}>Hello, I am fidding</Text>
+                    <Text style={{color: "white", fontSize: 30}}>Hello, I am fidding{'\n\n'}</Text>
+                    <Text style={[STYLES.text16, STYLES.textWhite]}>
+                        <Text >
+                            <Icon name="envelope" size={18} color="#ffffff"/>
+                            &nbsp;&nbsp; 395455856@qq.com{'\n\n'}
+                        </Text>
+                        <Text>
+                            <Icon name="chain" size={18} color="#ffffff"/>
+                            &nbsp;&nbsp; http://www.fidding.me{'\n\n'}
+                        </Text>
+                        <Text >
+                            <Icon name="github" size={18} color="#ffffff"/>
+                            &nbsp;&nbsp; https://github.com/fidding{'\n\n'}
+                        </Text>
+                    </Text>
                 </View>
             </View>
 	    );
