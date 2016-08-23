@@ -47,7 +47,7 @@ class navigation extends Component {
                 flex: 1,
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: 30,
+                fontSize: 40,
                 color: '#FFFFFF',
                 fontWeight: 'bold'
             },
@@ -77,7 +77,7 @@ class navigation extends Component {
                         <TouchableOpacity
                             onPress={() => navigator.pop()}
                             style={styles.button}>
-                            <Icon name="chevron-left" size={23} color="white" />
+                            <Icon name="chevron-left" size={22} color="white" />
                         </TouchableOpacity>
                     );
                 } else {
@@ -91,18 +91,18 @@ class navigation extends Component {
                 }
             },
             RightButton(route, navigator, index, navState) {
-                if(index > 0 && route.rightButton) {
+                if(index > 0) {
                     return (
                         <TouchableOpacity
-                            onPress={() => navigator.pop()}
                             style={styles.button}>
-                            <Text style={styles.buttonText}></Text>
+                            <Text style={styles.buttonText}>
+                                <Icon name="search" size={22} color="white" />
+                            </Text>
                         </TouchableOpacity>
                     );
                 } else {
                     return null;
                 }
-
             },
             Title(route, navigator, index, navState) {
                 return (

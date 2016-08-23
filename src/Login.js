@@ -77,7 +77,8 @@ class Login extends React.Component {
                     <Text style={[STYLES.textWhite, STYLES.textCenter]}>
                         <Text style={[STYLES.textBold, STYLES.text40]}>Fidding{'\n'}</Text>
                         <Text style={[STYLES.text16]}>
-                            a  best react-native demo for beginners
+                            {'\n'}
+                            &nbsp; a  simple react-native demo for beginners &nbsp;
                         </Text>
                     </Text>
                 </View>

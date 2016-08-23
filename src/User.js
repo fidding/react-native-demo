@@ -28,7 +28,7 @@ class User extends React.Component {
 	    super(props);
 
         // init : new a datasource objec
-        var ds =new ListView.DataSource({
+        var ds = new ListView.DataSource({
             rowHasChanged: (r1, r2) => r1 !== r2,
 
             // if use sectionData
