@@ -1,5 +1,7 @@
 package com.reactnativelogin;
 
+import com.oblador.vectoricons.VectorIconsPackage;
+
 import android.app.Application;
 import android.util.Log;
 
@@ -14,22 +16,23 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
-    @Override
-    protected boolean getUseDeveloperSupport() {
-      return BuildConfig.DEBUG;
-    }
+    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+            @Override
+            protected boolean getUseDeveloperSupport() {
+                return BuildConfig.DEBUG;
+            }
+
+            @Override
+            protected List<ReactPackage> getPackages() {
+                return Arrays.<ReactPackage>asList(
+                                                   new MainReactPackage()
+                                                   , new VectorIconsPackage()
+                                                   );
+            }
+        };
 
     @Override
-    protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
-      );
+    public ReactNativeHost getReactNativeHost() {
+        return mReactNativeHost;
     }
-  };
-
-  @Override
-  public ReactNativeHost getReactNativeHost() {
-      return mReactNativeHost;
-  }
 }
