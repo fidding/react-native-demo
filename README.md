@@ -1,2 +1,2 @@
-# react-native-login
-react-native login demo (RN登陆)
+# react-native-demo
+a simple react-native demo for beginner(android)
