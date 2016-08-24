@@ -9,7 +9,7 @@ import {
     StyleSheet,
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/EvilIcons';
 
 // pages
 import User from './User';
@@ -45,6 +45,7 @@ class Login extends React.Component {
 	        this.props.navigator.push({
                 title: 'User Center',
 	            component: User,
+                type: 'user',
 	            params: {
 		            name: this.state.name
 	            }
@@ -89,7 +90,7 @@ class Login extends React.Component {
                         </Text>
                     </View>
                     <View style={[styles.inputBox, STYLES.radius25, STYLES.mt20]}>
-                        <Icon name="user" size={23} color="white" />
+                        <Icon name="user" size={30} color="white" />
                         <TextInput
                             value={this.state.name}
                             onChangeText={name => this.setState({ name })}
@@ -100,7 +101,7 @@ class Login extends React.Component {
                         />
                     </View>
                     <View style={[styles.inputBox, STYLES.radius25, STYLES.mt20]}>
-                        <Icon name="lock" size={23} color="white" />
+                        <Icon name="lock" size={32} color="white" />
                         <TextInput
                             value={this.state.password}
                             onChangeText={password => this.setState({ password })}

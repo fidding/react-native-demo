@@ -69,18 +69,29 @@ class navigation extends Component {
                 textAlign: 'center'
             }
         };
-
         var routeMapper = {
             LeftButton(route, navigator, index, navState) {
                 if(index > 0) {
-                    return (
-                        <TouchableOpacity
-                            onPress={() => navigator.pop()}
-                            style={styles.button}>
-                            <Icon name="chevron-left" size={22} color="white" />
-                        </TouchableOpacity>
-                    );
+                    // user page
+                    if (route.type == 'user') {
+                        return (
+                            <TouchableOpacity
+                                style={styles.button}>
+                                <Icon name="bars" size={22} color="white" />
+                            </TouchableOpacity>
+                        );
+                    } else {
+                        return (
+                            <TouchableOpacity
+                                onPress={() => navigator.pop()}
+                                style={styles.button}>
+                                <Icon name="arrow-left" size={22} color="white" />
+                            </TouchableOpacity>
+                        );
+
+                    }
                 } else {
+                    // index page
                     return (
                         <TouchableOpacity
                             onPress={() => navigator.pop()}
@@ -92,14 +103,17 @@ class navigation extends Component {
             },
             RightButton(route, navigator, index, navState) {
                 if(index > 0) {
-                    return (
-                        <TouchableOpacity
-                            style={styles.button}>
-                            <Text style={styles.buttonText}>
-                                <Icon name="search" size={22} color="white" />
-                            </Text>
-                        </TouchableOpacity>
-                    );
+                    if (route.type == 'user') {
+                        return (
+                            <TouchableOpacity
+                                style={styles.button}>
+                                <Text style={styles.buttonText}>
+                                    <Icon name="search" size={22} color="white" />
+                                </Text>
+                            </TouchableOpacity>
+                        );
+                    }
+                    return null;
                 } else {
                     return null;
                 }
