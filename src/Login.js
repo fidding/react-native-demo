@@ -39,9 +39,9 @@ class Login extends React.Component {
      * open user page
      */
     openUserPage() {
-        //if (!this.state.name || !this.state.password) {
+        if (!this.state.name || !this.state.password) {
             this.setState({error: true});
-        //} else {
+        } else {
 	        this.props.navigator.push({
                 title: 'User Center',
 	            component: User,
@@ -50,7 +50,7 @@ class Login extends React.Component {
 		            name: this.state.name
 	            }
 	        });
-        //}
+        }
     }
 
     /*

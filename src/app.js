@@ -73,23 +73,21 @@ class navigation extends Component {
             LeftButton(route, navigator, index, navState) {
                 if(index > 0) {
                     // user page
-                    if (route.type == 'user') {
-                        return (
-                            <TouchableOpacity
-                                style={styles.button}>
-                                <Icon name="bars" size={22} color="white" />
-                            </TouchableOpacity>
-                        );
-                    } else {
-                        return (
-                            <TouchableOpacity
-                                onPress={() => navigator.pop()}
-                                style={styles.button}>
-                                <Icon name="arrow-left" size={22} color="white" />
-                            </TouchableOpacity>
-                        );
-
-                    }
+                    /* if (route.type == 'user') {
+                     *     return (
+                     *         <TouchableOpacity
+                     *             style={styles.button}>
+                     *             <Icon name="bars" size={22} color="white" />
+                     *         </TouchableOpacity>
+                     *     );
+                     * }*/
+                    return (
+                        <TouchableOpacity
+                        onPress={() => navigator.pop()}
+                        style={styles.button}>
+                        <Icon name="arrow-left" size={22} color="white" />
+                        </TouchableOpacity>
+                    );
                 } else {
                     // index page
                     return (
